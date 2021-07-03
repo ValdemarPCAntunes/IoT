@@ -1,10 +1,25 @@
 mongo:
-    image: mongo:4.4
+    image: mongo:3.6
     command: --nojournal
-  orion:
+client:
+    image: iot-isel/fiware-client
+    ports:
+     - "8080:8080"   
+orion:
     image: fiware/orion
     links:
       - mongo
+      - client
     ports:
       - "1026:1026"
     command: -dbhost mongo
+    environment:
+      - TZ=Europe/Lisbon
+node-red:
+     image: nodered/node-red:latest
+     links:
+      - orion
+     ports:
+       - "1880:1880"
+     environment:
+       - TZ=Europe/Lisbon
