@@ -36,4 +36,6 @@ Posto isto, a subscrição pelas aplicações consumidoras é feita através do 
 	"expires": "2021-10-01T11:00:00.00Z",
 	"throttling": 5
 }
+. Para iniciar a dashboard navegar para o canto superior direito do Node-red, pressionar na seta mais à direita, selecionar Dashboard. Ao lado da tab `Theme` estará um botão para redirecionar à aplicação da dashboard;
+. Para iniciar o mapa, na visão do Node-red, pressionar CTRL+SHIFT+M;
 Para concluir, falta apenas efetuar leituras com o dispositivo QoW-Shark!
